@@ -1,0 +1,113 @@
+/* Estilos globales */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg, #ffc0cb, #ffe4e1);
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Pantalla de Bienvenida */
+.welcome-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(120deg, #ffc0cb, #ffe4e1);
+}
+.led-text {
+  font-size: 3rem;
+  font-family: 'Dancing Script', cursive;
+  color: #fff;
+  text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493, 0 0 30px #ff1493;
+  animation: blink 1.5s infinite alternate;
+  margin-bottom: 20px;
+}
+@keyframes blink {
+  from { opacity: 1; }
+  to { opacity: 0.5; }
+}
+.open-btn {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #ff1493;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.open-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Contenedor de la Carta del Día */
+.card-container {
+  margin: 40px auto;
+  max-width: 600px;
+  padding: 20px;
+  background: #2c0028; /* Fondo oscuro para efecto LED */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  animation: fadeInUp 1s ease;
+  border: 2px solid #ff69b4;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hidden {
+  display: none;
+}
+.led-card {
+  color: #fff;
+  text-shadow: 0 0 8px #ff69b4, 0 0 12px #ff1493, 0 0 16px #ff1493;
+  animation: blink 1.5s infinite alternate;
+  text-align: justify;
+  margin: 20px 0;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  white-space: pre-line;
+}
+
+/* Historial de Cartas */
+.all-cards-container {
+  margin: 40px auto;
+  max-width: 600px;
+  padding: 20px;
+  background: #2c0028;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  animation: fadeInUp 1s ease;
+  border: 2px solid #ff69b4;
+}
+#allCardsList {
+  text-align: left;
+}
+#allCardsList p {
+  color: #fff;
+  text-shadow: 0 0 8px #ff69b4, 0 0 12px #ff1493, 0 0 16px #ff1493;
+  margin: 15px 0;
+  line-height: 1.4;
+}
+
+/* Botones en fila */
+.buttons-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.small-btn {
+  padding: 8px 12px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #ff1493;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.small-btn:hover {
+  transform: scale(1.1);
+}

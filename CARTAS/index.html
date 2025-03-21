@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cartas Diarias para Wendy Loraine</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Fonts (opcional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <!-- PANTALLA DE BIENVENIDA -->
+  <div id="welcomeScreen" class="welcome-screen">
+    <h1 class="led-text">PARA WENDY LORAINE</h1>
+    <button class="open-btn" onclick="openApp()">ABRIR</button>
+  </div>
+
+  <!-- CONTENEDOR DE LA CARTA DEL DÍA (oculto por defecto) -->
+  <div id="cardContainer" class="card-container hidden">
+    <h1 class="led-card" id="cardTitle">Carta del Día</h1>
+    <p class="led-card" id="cardMessage"></p>
+    <p class="led-card" id="cardDate"></p>
+    <div class="buttons-row">
+      <!-- El botón de historial se muestra si hay al menos un día anterior -->
+      <button id="historyBtn" class="small-btn" onclick="showAllMessages()">Ver Carta Pasada</button>
+      <button class="small-btn" onclick="goHome()">Regresar al Inicio</button>
+    </div>
+  </div>
+
+  <!-- CONTENEDOR DEL HISTORIAL DE CARTAS (oculto por defecto) -->
+  <div id="allCardsContainer" class="all-cards-container hidden">
+    <h2 class="led-card">Carta del Día Pasado</h2>
+    <div id="allCardsList"></div>
+    <div class="buttons-row">
+      <button class="small-btn" onclick="hideAllMessages()">Regresar a la Carta de Hoy</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
